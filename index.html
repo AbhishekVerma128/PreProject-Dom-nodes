@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>heading 1</h1>
+        <span>
+            <p>this is para</p>
+        </span>
+
+    </div>
+    <!-- this is a comment -->
+    <div>
+        <ul>
+            <li>li1</li>
+            <li>li2</li>
+            <li>li3</li>
+        </ul>
+    </div>
+</body>
+<script>
+// to get all the nodes
+const allNodes = document.querySelectorAll("*");
+console.log(allNodes)
+// Access the HTML document
+const doc = document.documentElement;
+
+// // Traverse the nodes and print their properties
+allNodes.forEach(node => {
+ console.log(node.nodeName);
+ console.log("childen of", node.nodeName)
+ console.log(node.childNodes);
+  console.log('Parent:', node.parentNode?.nodeName);
+  console.log('Children:', node.childNodes.length);
+  console.log('Previous Sibling:', node.previousSibling?.nodeName);
+  console.log('Next Sibling:', node.nextSibling?.nodeName);
+  console.log('---------------------');
+});
+
+</script>
+</html>
